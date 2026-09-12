@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "projectsDone": "Projects Done",
+    "projectsNeeded": "Projects Needed",
+    "news": "News & Media",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "donate": "Donate"
+  },
+  "home": {
+    "heroTag": "Featured",
+    "heroHeadline": "Education shouldn't depend on where a child is born",
+    "heroSubtitle": "UEDS works with tea-estate and upcountry communities across the central highlands of Sri Lanka.",
+    "visionTitle": "Vision",
+    "visionBody": "An upcountry Sri Lanka where every child completes their education with the same opportunities as any child in the country.",
+    "missionTitle": "Mission",
+    "missionBody": "To fund, build and sustain education and community-development programmes for upcountry students and families, in direct partnership with the communities we serve.",
+    "whatWeDo": "What we do",
+    "whatWeDoSubtitle": "Six ways we work alongside upcountry communities, from the classroom to the community hall.",
+    "item1Title": "Educational programmes",
+    "item1Body": "After-school support, teacher training and learning resources for estate-area schools.",
+    "item2Title": "Scholarships",
+    "item2Body": "Annual scholarships covering fees, materials and transport for students at risk of dropping out.",
+    "item3Title": "Student-support services",
+    "item3Body": "Counselling, meals and health referrals for students facing hardship at home.",
+    "item4Title": "Community development",
+    "item4Body": "Infrastructure and facilities — libraries, classrooms, water and sanitation — built with local communities.",
+    "item5Title": "Events",
+    "item5Body": "Prize-givings, career fairs and parent workshops held across our partner divisions.",
+    "item6Title": "Activities",
+    "item6Body": "Sport, arts and holiday programmes that keep students engaged outside term time.",
+    "communityHeading": "The people behind the work",
+    "communitySubtitle": "Every project starts with the tea-estate families and communities who shape it.",
+    "impactHeading": "Our impact so far",
+    "impactStudents": "Students supported",
+    "impactScholarships": "Scholarships awarded",
+    "impactProjects": "Projects completed",
+    "impactDivisions": "Estate divisions reached",
+    "featuredHeading": "See what we've built, and what still needs funding",
+    "featuredSubtitle": "A look at recently completed projects and the ones still raising support.",
+    "viewOurWork": "View our work"
+  },
+  "about": {
+    "title": "About Us",
+    "boardMembers": "Board Members",
+    "committeeMembers": "Committee Members"
+  },
+  "projects": {
+    "doneTitle": "Projects Done",
+    "neededTitle": "Projects Needed",
+    "raised": "Raised",
+    "target": "Target",
+    "readMore": "Read more",
+    "backToList": "Back to list",
+    "additionalPhotos": "Photos"
+  },
+  "news": {
+    "title": "News & Media"
+  },
+  "gallery": {
+    "title": "Gallery"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "officeDetails": "Office Details",
+    "bankDetails": "Bank Account Details",
+    "location": "Office Location",
+    "formTitle": "Send us a message",
+    "name": "Full name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Thank you, your message has been sent.",
+    "error": "Something went wrong. Please try again."
+  },
+  "donate": {
+    "title": "Support our work",
+    "intro": "Every donation goes directly to a named project. You can donate directly via bank transfer using the details below.",
+    "bankName": "Bank",
+    "branch": "Branch",
+    "accountName": "Account name",
+    "accountNumber": "Account number",
+    "swift": "SWIFT code",
+    "close": "Close"
+  },
+  "footer": {
+    "explore": "Explore",
+    "getInvolved": "Get involved",
+    "contact": "Contact",
+    "volunteer": "Volunteer",
+    "partner": "Partner with us",
+    "rights": "All rights reserved.",
+    "regNumber": "Reg. No."
+  }
+}

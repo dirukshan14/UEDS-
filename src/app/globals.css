@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f6f2e9;
+  color: #22201b;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Fraunces', 'Georgia', serif;
+  font-weight: 500;
+  color: #1f3d2b;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.ph {
+  position: relative;
+  background: linear-gradient(135deg, #3c5d45, #1f3d2b 60%, #8ca38f);
+  overflow: hidden;
+}
+.ph.gold {
+  background: linear-gradient(135deg, #c48a3e, #8a5a24 65%, #3c5d45);
+}
+.ph.sage {
+  background: linear-gradient(135deg, #8ca38f, #3c5d45 70%);
+}
+
+.btn-donate {
+  background: #7a3226;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: opacity 0.15s ease;
+  display: inline-block;
+}
+.btn-donate:hover {
+  opacity: 0.9;
+}

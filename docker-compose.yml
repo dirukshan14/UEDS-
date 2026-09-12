@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: ueds_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ueds_user
+      POSTGRES_PASSWORD: ueds_password
+      POSTGRES_DB: ueds_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - ueds_pgdata:/var/lib/postgresql/data
+
+volumes:
+  ueds_pgdata:

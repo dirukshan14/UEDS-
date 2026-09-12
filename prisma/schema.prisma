@@ -1,0 +1,118 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- Admin auth ----------
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String   @default("Administrator")
+  createdAt    DateTime @default(now())
+}
+
+// ---------- About Us: Board & Committee members ----------
+enum MemberGroup {
+  BOARD
+  COMMITTEE
+}
+
+model Member {
+  id             String      @id @default(cuid())
+  group          MemberGroup
+  photoUrl       String?
+  nameEn         String
+  nameTa         String
+  nameSi         String
+  designationEn  String
+  designationTa  String
+  designationSi  String
+  order          Int         @default(0)
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+// ---------- Projects / News / Gallery ----------
+// One flexible model covers Projects Done, Projects Needed, News & Media and Gallery,
+// since all four are "item with main image + title + detail + extra photos" collections.
+enum ContentType {
+  PROJECT_DONE
+  PROJECT_NEEDED
+  NEWS
+  GALLERY
+}
+
+model ContentItem {
+  id               String      @id @default(cuid())
+  type             ContentType
+  slug             String      @unique
+  mainImageUrl     String?
+  titleEn          String
+  titleTa          String
+  titleSi          String
+  summaryEn        String?
+  summaryTa        String?
+  summarySi        String?
+  descriptionEn    String?     @db.Text
+  descriptionTa    String?     @db.Text
+  descriptionSi    String?     @db.Text
+  // Only used for PROJECT_NEEDED, optional fundraising progress
+  targetAmount     Int?
+  raisedAmount     Int?
+  published        Boolean     @default(true)
+  featured         Boolean     @default(false)
+  order            Int         @default(0)
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+  photos           Photo[]
+}
+
+model Photo {
+  id            String      @id @default(cuid())
+  url           String
+  captionEn     String?
+  captionTa     String?
+  captionSi     String?
+  order         Int         @default(0)
+  contentItem   ContentItem @relation(fields: [contentItemId], references: [id], onDelete: Cascade)
+  contentItemId String
+}
+
+// ---------- Site-wide settings (singleton row) ----------
+model SiteSettings {
+  id                 String   @id @default("singleton")
+  orgNameEn          String   @default("Upcountry Education Development Society")
+  orgNameTa          String   @default("")
+  orgNameSi          String   @default("")
+  addressEn          String   @default("")
+  addressTa          String   @default("")
+  addressSi          String   @default("")
+  phone              String   @default("")
+  officeEmail        String   @default("")
+  mapEmbedUrl        String   @default("")
+  bankName           String   @default("")
+  bankBranch         String   @default("")
+  bankAccountName    String   @default("")
+  bankAccountNumber  String   @default("")
+  bankSwiftCode      String   @default("")
+  facebookUrl        String   @default("")
+  youtubeUrl         String   @default("")
+  regNumber          String   @default("")
+  updatedAt          DateTime @updatedAt
+}
+
+// ---------- Contact form submissions (kept as a record even though also emailed) ----------
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String?
+  message   String   @db.Text
+  createdAt DateTime @default(now())
+}
