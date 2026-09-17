@@ -53,8 +53,8 @@ model ContentItem {
   slug             String      @unique
   mainImageUrl     String?
   titleEn          String
-  titleTa          String
-  titleSi          String
+  titleTa          String?
+  titleSi          String?
   summaryEn        String?
   summaryTa        String?
   summarySi        String?

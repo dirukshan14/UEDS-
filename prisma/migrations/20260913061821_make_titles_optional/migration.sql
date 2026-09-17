@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "ContentItem" ALTER COLUMN "titleTa" DROP NOT NULL,
+ALTER COLUMN "titleSi" DROP NOT NULL;
