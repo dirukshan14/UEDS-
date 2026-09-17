@@ -42,7 +42,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
           <span className="text-gold text-sm font-semibold mb-2 uppercase tracking-wide">
             {t('heroTag')}
           </span>
-          <h1 className="font-serif text-4xl md:text-5xl max-w-2xl text-white">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl max-w-2xl text-white">
             {t('heroHeadline')}
           </h1>
           <p className="mt-4 max-w-xl text-white/85">{t('heroSubtitle')}</p>
@@ -50,7 +50,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
       </section>
 
       {/* Vision / Mission */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="wrap grid md:grid-cols-2 gap-10 items-center">
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden order-2 md:order-1">
             <Image
@@ -75,7 +75,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
       </section>
 
       {/* What we do */}
-      <section className="py-16 bg-paperDim">
+      <section className="py-10 sm:py-16 bg-paperDim">
         <div className="wrap">
           <div className="max-w-2xl mb-8">
             <h2 className="text-2xl mb-2">{t('whatWeDo')}</h2>
@@ -93,13 +93,13 @@ export default async function HomePage({ params: { locale } }: { params: { local
       </section>
 
       {/* Community photo strip */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="wrap">
           <div className="max-w-2xl mb-8">
             <h2 className="text-2xl mb-2">{t('communityHeading')}</h2>
             <p className="text-inkSoft">{t('communitySubtitle')}</p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {communityPhotos.map((photo) => (
               <div key={photo.src} className="relative aspect-[3/4] rounded-xl overflow-hidden">
                 <Image
@@ -116,7 +116,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
       </section>
 
       {/* Impact stats */}
-      <section className="relative py-16 text-white overflow-hidden">
+      <section className="relative py-10 sm:py-16 text-white overflow-hidden">
         <Image
           src="/images/home/community-portrait.jpg"
           alt=""
@@ -147,7 +147,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
 
       {/* Featured work */}
       {featured.length > 0 && (
-        <section className="py-16">
+        <section className="py-10 sm:py-16">
           <div className="wrap">
             <div className="flex justify-between items-end flex-wrap gap-4 mb-8">
               <div className="max-w-xl">

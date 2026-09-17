@@ -25,6 +25,16 @@ h1, h2, h3, .display {
   padding: 0 28px;
 }
 
+@media (max-width: 640px) {
+  .wrap {
+    padding: 0 18px;
+  }
+}
+
+* {
+  overflow-wrap: break-word;
+}
+
 .ph {
   position: relative;
   background: linear-gradient(135deg, #3c5d45, #1f3d2b 60%, #8ca38f);

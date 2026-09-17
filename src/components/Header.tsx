@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import { useState } from 'react';
@@ -27,30 +28,38 @@ export default function Header({ settings }: { settings: SiteSettingsData }) {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-paper border-b border-line">
-        <div className="wrap flex items-center justify-between py-4 gap-4 flex-wrap">
-          <Link href={`/${locale}`} className="flex items-center gap-2.5">
-            <div
-              className="w-8 h-8 rounded-full"
-              style={{ background: 'conic-gradient(from 210deg,#1f3d2b,#c48a3e,#1f3d2b)' }}
-            />
-            <div className="font-serif text-lg text-greenDeep leading-tight">
+      <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur border-b border-line shadow-sm">
+        <div className="wrap flex items-center justify-between h-20 gap-3 sm:gap-6">
+          {/* Logo */}
+          <Link href={`/${locale}`} className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+            <span className="relative w-10 h-12 sm:w-12 sm:h-14 shrink-0">
+              <Image
+                src="/images/brand/logo-emblem.png"
+                alt="UEDS logo"
+                fill
+                className="object-contain"
+                sizes="48px"
+                priority
+              />
+            </span>
+            <span className="font-serif text-lg sm:text-xl text-greenDeep leading-tight min-w-0 truncate">
               UEDS
-              <small className="block font-sans text-[11px] text-inkSoft font-medium">
+              <small className="hidden sm:block font-sans text-[11px] text-inkSoft font-medium tracking-wide truncate">
                 Upcountry Education Development Society
               </small>
-            </div>
+            </span>
           </Link>
 
+          {/* Desktop nav */}
           <nav className="hidden lg:block">
-            <ul className="flex gap-6 text-[14.5px] font-medium list-none m-0 p-0">
+            <ul className="flex items-center gap-7 text-[14.5px] font-medium list-none m-0 p-0">
               {links.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className={`pb-1 border-b-2 ${
-                      pathname === l.href ? 'border-gold' : 'border-transparent'
-                    } hover:border-gold transition-colors`}
+                    className={`inline-block py-1 border-b-2 ${
+                      pathname === l.href ? 'border-gold text-greenDeep' : 'border-transparent'
+                    } hover:border-gold hover:text-greenDeep transition-colors`}
                   >
                     {l.label}
                   </Link>
@@ -59,31 +68,51 @@ export default function Header({ settings }: { settings: SiteSettingsData }) {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-3">
+          {/* Right cluster */}
+          <div className="flex items-center gap-3 shrink-0">
             <LanguageSwitcher />
-            <button className="btn-donate" onClick={() => setDonateOpen(true)}>
+            <button className="btn-donate hidden sm:inline-block" onClick={() => setDonateOpen(true)}>
               {t('donate')}
             </button>
             <button
-              className="lg:hidden text-2xl leading-none"
+              className="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-line text-xl leading-none text-greenDeep"
               aria-label="Toggle menu"
+              aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
             >
-              ☰
+              {menuOpen ? '✕' : '☰'}
             </button>
           </div>
         </div>
 
+        {/* Mobile nav */}
         {menuOpen && (
           <nav className="lg:hidden border-t border-line bg-paper">
-            <ul className="flex flex-col p-4 gap-3 text-sm font-medium list-none m-0">
+            <ul className="flex flex-col p-4 gap-1 text-[15px] font-medium list-none m-0">
               {links.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} onClick={() => setMenuOpen(false)}>
+                  <Link
+                    href={l.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={`block px-3 py-2.5 rounded-lg ${
+                      pathname === l.href ? 'bg-paperDim text-greenDeep' : 'text-ink'
+                    }`}
+                  >
                     {l.label}
                   </Link>
                 </li>
               ))}
+              <li className="sm:hidden pt-2">
+                <button
+                  className="btn-donate w-full text-center"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setDonateOpen(true);
+                  }}
+                >
+                  {t('donate')}
+                </button>
+              </li>
             </ul>
           </nav>
         )}

@@ -10,7 +10,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
   const address = settings ? pickLocaleField(settings, 'address', locale) : '';
 
   return (
-    <div className="wrap py-16">
+    <div className="wrap py-10 sm:py-16">
       <h1 className="text-3xl mb-10">{t('title')}</h1>
 
       <div className="grid lg:grid-cols-2 gap-12">

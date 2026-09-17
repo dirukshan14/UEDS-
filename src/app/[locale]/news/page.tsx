@@ -8,7 +8,7 @@ export default async function NewsPage({ params: { locale } }: { params: { local
   const items = await getItemsByType(ContentType.NEWS);
 
   return (
-    <div className="wrap py-16">
+    <div className="wrap py-10 sm:py-16">
       <h1 className="text-3xl mb-10">{t('title')}</h1>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((item) => (

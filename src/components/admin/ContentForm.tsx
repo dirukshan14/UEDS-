@@ -57,7 +57,7 @@ export default function ContentForm({
         {isNeeded && (
           <fieldset className="border border-line rounded-lg p-4">
             <legend className="text-sm font-medium px-1">Funding progress</legend>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-xs text-inkSoft block mb-1">Target amount (Rs.)</label>
                 <input type="number" name="targetAmount" defaultValue={item?.targetAmount ?? ''} className="w-full border border-line rounded-lg px-3 py-2" />
@@ -75,7 +75,7 @@ export default function ContentForm({
           <input type="file" name="extraPhotos" accept="image/*" multiple />
         </div>
 
-        <div className="flex gap-6 items-center">
+        <div className="flex flex-wrap gap-4 sm:gap-6 items-center">
           <label className="flex items-center gap-2 text-sm">
             <input type="checkbox" name="published" defaultChecked={item?.published ?? true} /> Published
           </label>

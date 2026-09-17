@@ -8,7 +8,7 @@ export default async function ProjectsNeededPage({ params: { locale } }: { param
   const items = await getItemsByType(ContentType.PROJECT_NEEDED);
 
   return (
-    <div className="wrap py-16">
+    <div className="wrap py-10 sm:py-16">
       <h1 className="text-3xl mb-10">{t('neededTitle')}</h1>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((item) => (

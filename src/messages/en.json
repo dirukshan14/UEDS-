@@ -14,9 +14,9 @@
     "heroHeadline": "Education shouldn't depend on where a child is born",
     "heroSubtitle": "UEDS works with tea-estate and upcountry communities across the central highlands of Sri Lanka.",
     "visionTitle": "Vision",
-    "visionBody": "An upcountry Sri Lanka where every child completes their education with the same opportunities as any child in the country.",
+    "visionBody": "To create a future where every economically disadvantaged student in the upcountry region has equal access to quality education, empowering them to achieve their full potential and contribute to the development of their communities and nation. translate sinhala",
     "missionTitle": "Mission",
-    "missionBody": "To fund, build and sustain education and community-development programmes for upcountry students and families, in direct partnership with the communities we serve.",
+    "missionBody": "To improve education for economically disadvantaged students in the upcountry region through scholarships, academic support, school resources, and sports development, while reducing the education gap and empowering youth for positive change.",
     "whatWeDo": "What we do",
     "whatWeDoSubtitle": "Six ways we work alongside upcountry communities, from the classroom to the community hall.",
     "item1Title": "Educational programmes",
@@ -45,7 +45,9 @@
   "about": {
     "title": "About Us",
     "boardMembers": "Board Members",
-    "committeeMembers": "Committee Members"
+    "committeeMembers": "Committee Members",
+    "ourPeople": "Our People",
+    "noMembers": "No members added yet."
   },
   "projects": {
     "doneTitle": "Projects Done",

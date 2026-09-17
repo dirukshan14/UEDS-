@@ -15,7 +15,7 @@ export default async function GalleryDetailPage({
   if (!item) notFound();
 
   return (
-    <div className="wrap py-16">
+    <div className="wrap py-10 sm:py-16">
       <Link href={`/${locale}/gallery`} className="text-sm text-gold mb-6 inline-block">
         ← Back
       </Link>
