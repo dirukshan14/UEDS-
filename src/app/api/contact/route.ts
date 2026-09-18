@@ -1,14 +1,14 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { z } from 'zod';
-import { prisma } from '@/lib/prisma';
-import { sendContactEmail } from '@/lib/mailer';
+import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
+import { prisma } from "@/lib/prisma";
+import { sendContactEmail } from "@/lib/mailer";
 
 const schema = z.object({
   name: z.string().min(1).max(200),
   email: z.string().email(),
-  phone: z.string().max(50).optional().or(z.literal('')),
-  subject: z.string().max(200).optional().or(z.literal('')),
-  message: z.string().min(1).max(5000)
+  phone: z.string().max(50).optional(),
+  subject: z.string().max(200).optional(),
+  message: z.string().min(1).max(5000),
 });
 
 export async function POST(req: NextRequest) {
@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const parsed = schema.safeParse(body);
     if (!parsed.success) {
-      return NextResponse.json({ error: 'Invalid input' }, { status: 400 });
+      return NextResponse.json({ error: "Invalid input" }, { status: 400 });
     }
     const data = parsed.data;
 
@@ -27,20 +27,26 @@ export async function POST(req: NextRequest) {
         email: data.email,
         phone: data.phone || null,
         subject: data.subject || null,
-        message: data.message
-      }
+        message: data.message,
+      },
     });
 
     try {
-      await sendContactEmail(data);
+      await sendContactEmail({
+        name: data.name,
+        email: data.email,
+        phone: data.phone || undefined,
+        subject: data.subject || undefined,
+        message: data.message,
+      });
     } catch (mailError) {
-      console.error('Failed to send contact email:', mailError);
+      console.error("Failed to send contact email:", mailError);
       // The message is safely stored in the database, so we don't fail the request.
     }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error('Contact form error:', error);
-    return NextResponse.json({ error: 'Server error' }, { status: 500 });
+    console.error("Contact form error:", error);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
