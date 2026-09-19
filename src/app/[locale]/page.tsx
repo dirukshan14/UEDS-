@@ -46,7 +46,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
         <div className="wrap grid md:grid-cols-2 gap-10 items-center">
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden order-2 md:order-1">
             <Image
-              src="/images/home/tea-picker-portrait.jpg"
+              src="/images/home/student-portrait.jpg"
               alt="A tea plucker carrying a basket through the tea fields"
               fill
               className="object-cover"
