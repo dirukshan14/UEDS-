@@ -27,27 +27,19 @@ export default async function HomePage({ params: { locale } }: { params: { local
 
   return (
     <div>
-      {/* Hero */}
-      <section className="relative h-[75vh] min-h-[480px]">
-        <Image
-          src="/images/home/hero-tea-estate.jpg"
-          alt="Misty tea plantations in the central highlands of Sri Lanka at sunrise"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
-        <div className="wrap absolute inset-0 flex flex-col justify-end pb-16 text-white">
-          <span className="text-gold text-sm font-semibold mb-2 uppercase tracking-wide">
-            {t('heroTag')}
-          </span>
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl max-w-2xl text-white">
-            {t('heroHeadline')}
-          </h1>
-          <p className="mt-4 max-w-xl text-white/85">{t('heroSubtitle')}</p>
-        </div>
-      </section>
+{/* Hero — responsive full banner */}
+{/* Hero — full banner, never cropped, scales to any screen width */}
+<section className="w-full">
+  <Image
+    src="/images/home/hero-banner.jpg"
+    alt="Upcountry Education Development Society – Colombo"
+    width={1920}
+    height={600}
+    priority
+    className="w-full h-auto"
+    sizes="100vw"
+  />
+</section>
 
       {/* Vision / Mission */}
       <section className="py-10 sm:py-16">
