@@ -1,3 +1,4 @@
+
 export type StorySection = {
   heading?: string;
   paragraphs: string[];
@@ -11,114 +12,73 @@ export type AboutStory = {
 };
 
 export const aboutStory: Record<'en' | 'ta' | 'si', AboutStory> = {
+  // =========================================================
+  // ENGLISH
+  // =========================================================
   en: {
-    title: 'History of Upcountry Education Development Society – Colombo',
+    title: 'Upcountry Education Development Society',
 
     intro: [
-      'Recognizing the hardship poverty inflicted on the lives of estate workers, two friends, Mr. Thanaraj and Mr. Thavakumar, became close acquaintances in Chettiar Street in the 1990s. Believing that education was the one force capable of transforming the hill-country community and the future of its students, they set out to bring together hill-country people living in the capital to form an organisation.',
+      'The Upcountry Education Development Society was established in 2006 on Sea Street, Colombo, by young people and working professionals employed in the capital. For the past 20 years, the Society has worked to improve the prospects of students from economically disadvantaged upcountry communities. Its aims are to strengthen their education, provide essential support to schools with limited resources, help students remain in school, and develop their talents in education, sport, art and culture.',
 
-      'As a result, the Upcountry Education Development Society was born on 26 August 2006 in Chettiar Street, Colombo. Of the more than 50 friends who gathered that day, many remain connected with the Society to this day.',
+      'Guided by the goal of “a graduate in every household across the upcountry,” we provide monthly scholarships to university students. We also offer assistance to students pursuing higher education overseas.',
 
-      'Mr. Thavakumar, who took office as the first Chairman, laid the foundation for the Society by forming its management committee with the support of his friend Mr. Thanaraj. Mr. Pangirasu served as the first Secretary. Mr. Thanaraj, who later became Chairman, drafted the Society\'s constitution, launched its website, and introduced the May Day sports meet as well as free educational seminars and mock examinations for students from scholarship level up to G.C.E. Advanced Level. Secretary A.S. Gnanam, Treasurer Mr. Ragadas, and Mr. M. Sivakumar, who promoted sports alongside education, also made notable contributions.'
+      'Each year, we conduct special seminars to help students achieve better results in the Grade 5 Scholarship Examination and the G.C.E. Ordinary Level and Advanced Level examinations. We also hold free practice examinations for students studying in Tamil-medium schools.',
+
+      'We identify schools facing resource shortages and provide students with learning materials, uniforms, footwear and school bags so they can continue their education without interruption. We also help renovate school buildings and improve facilities such as drinking water, electricity, toilets and boundary walls.',
+
+      'To expand opportunities for modern learning, we provide equipment such as smart boards and photocopy machines. We also conduct yoga training programmes to support students’ physical health and mental well-being.',
+
+      'With members in Colombo and beyond, the Society carries out a range of community activities and provides immediate relief when disasters occur. As a government-registered and recognised social service organisation, the Upcountry Education Development Society looks forward to bringing together more young people, business leaders and well-wishers to continue advancing the education of upcountry students.'
     ],
 
-    sections: [
-      {
-        paragraphs: [
-          'In the years that followed, under the leadership of Mr. K. Sivasubramaniam, Mr. A. Baskaran, Mr. S. Rajprabu, Mr. M. Sivakumar, Mr. M. Devarasan, and Mr. Sangar Suresh, the Society:'
-        ]
-      },
-
-      {
-        isList: true,
-        paragraphs: [
-          'Appointed volunteer teachers to schools in underprivileged hill-country areas',
-          'Formed a youth wing and expanded the Society\'s work (2015)',
-          'Successfully conducted guidance seminars to help graduates enter the Sri Lankan state administrative service',
-          'Donated medical equipment and supplies worth over one crore rupees to hill-country hospitals during the COVID-19 period (2019)',
-          'Introduced online education via YouTube to make learning accessible from home'
-        ]
-      },
-
-      {
-        paragraphs: [
-          'Today, with 19 years of history behind it, the Society continues its work under the leadership of Mr. Sivagnanam, backed by the full support of its management committee. Guided by the vision of "a graduate in every household," our goal remains the self-sufficiency of education in the hill country.'
-        ]
-      }
-    ]
+    sections: []
   },
 
+  // =========================================================
+  // TAMIL
+  // =========================================================
   ta: {
-    title: 'மலையகக் கல்வி அபிவிருத்தி மன்றம் – கொழும்பு இன் வரலாறு',
+    title: 'மலையகக் கல்வி அபிவிருத்தி மன்றம்',
 
     intro: [
-      'உழைப்பாளர் தோட்டத் தொழிலாளர்களின் வாழ்க்கையில் வறுமை ஏற்படுத்தும் பாதிப்பை உணர்ந்த திரு.தனராஜ் மற்றும் திரு.தவக்குமார் ஆகிய இரு நண்பர்கள், 1990களில் செட்டியார் தெருவில் அறிமுகமானார்கள். மலையகச் சமூகத்தையும் மாணவர்களின் எதிர்காலத்தையும் மாற்றக்கூடிய சக்தி கல்வியே என்பதை உணர்ந்த இவர்கள், தலைநகரில் வாழும் மலையக மக்களை ஒன்றிணைத்து ஒரு அமைப்பை உருவாக்க திட்டமிட்டனர்.',
+      'தலைநகரில் தொழில் புரியும் இளைஞர்களாலும், தொழில் தருணர்களாலும் 2006ஆம் ஆண்டில் கொழும்பு செட்டியார் தெருவில் மலையகக் கல்வி அபிவிருத்தி மன்றம் ஆரம்பிக்கப்பட்டது. பொருளாதார ரீதியில் பின்தங்கியுள்ள மலையக மாணவர்களின் எதிர்காலத்தை மேம்படுத்துவதும், அவர்களின் கல்வித் திறனை ஊக்குவிப்பதும், வளப் பற்றாக்குறை நிலவும் பாடசாலைகளுக்கு அத்தியாவசிய உதவிகளை வழங்குவதும் மன்றத்தின் நோக்கங்களாகும். இதன் மூலம் மாணவர்கள் கல்வியை இடைநிறுத்துவதைத் தவிர்க்கவும், கல்வி, விளையாட்டு, கலை மற்றும் கலாசாரம் போன்ற துறைகளில் அவர்களின் ஆற்றலை வளர்க்கவும் கடந்த 20 ஆண்டுகளாக எமது மன்றம் செயற்பட்டு வருகின்றது.',
 
-      'இதன் விளைவாக, 2006 ஆகஸ்ட் 26 அன்று மலையகக் கல்வி அபிவிருத்தி மன்றம் கொழும்பு செட்டியார் தெருவில் உதயமானது. அன்று கூடிய 50க்கும் மேற்பட்ட நண்பர்கள் இன்றும் மன்றத்துடன் தொடர்ந்து இணைந்திருக்கின்றனர்.',
+      '“மலையகமெங்கும் வீட்டுக்கொரு பட்டதாரியை உருவாக்க வேண்டும்” என்ற இலக்குடன், பல்கலைக்கழக மாணவர்களுக்கு மாதாந்தப் புலமைப்பரிசில்களை வழங்கி வருகின்றோம். வெளிநாடுகளுக்குச் சென்று உயர்கல்வி பெறுபவர்களுக்கும் தேவையான உதவிகளை வழங்கி வருகின்றோம்.',
 
-      'முதல் தலைவராகப் பொறுப்பேற்ற திரு.தவக்குமார், நண்பர் திரு.தனராஜின் துணையுடன் நிர்வாகக் குழுவை அமைத்து மன்றத்திற்கு அடித்தளமிட்டார். திரு. பங்கிராசு முதல் செயலாளராகப் பணியாற்றினார். பின்னர் தலைமையேற்ற திரு.தனராஜ், மன்ற யாப்பை உருவாக்கி, இணையதளம் ஆரம்பித்து, மேதின விளையாட்டுப் போட்டி மற்றும் இலவச கல்விக் கருத்தரங்குகள், முன்னோடிப் பரீட்சைகள் ஆகியவற்றை அறிமுகப்படுத்தினார். செயலாளர் ஏ.எஸ்.ஞானம், நிதிப் பொறுப்பாளர் திரு.ராகதாஸ், விளையாட்டுத் துறையை வளர்த்த திரு.எம்.சிவக்குமார் ஆகியோரும் குறிப்பிடத்தக்க பங்களிப்பாற்றினர்.'
+      'தரம் 5 புலமைப்பரிசில் பரீட்சை, க.பொ.த. சாதாரண தரம் மற்றும் உயர்தரப் பரீட்சைகளுக்குத் தோற்றும் மாணவர்கள் சிறந்த பெறுபேறுகளைப் பெற உதவும் வகையில், விசேட கருத்தரங்குகளை ஆண்டுதோறும் நடத்தி வருகின்றோம். தமிழ்மொழி மூலப் பாடசாலைகளின் மாணவர்களுக்காக இலவச முன்னோடிப் பரீட்சைகளையும் நடத்துகின்றோம்.',
+
+      'வளப் பற்றாக்குறையுடன் இயங்கும் பாடசாலைகளை அடையாளம் கண்டு, அங்கு கல்வி பயிலும் மாணவர்கள் தங்கள் கற்றலைத் தடையின்றித் தொடரத் தேவையான கற்றல் உபகரணங்கள், சீருடைகள், பாதணிகள் மற்றும் புத்தகப்பைகளை வழங்கி வருகின்றோம். பாடசாலைக் கட்டிடங்களைப் புனரமைப்பதுடன், குடிநீர், மின்சாரம், கழிவறைகள் மற்றும் பாதுகாப்பு மதில்கள் போன்ற உட்கட்டமைப்பு வசதிகளை ஏற்படுத்தவும் உதவி வருகின்றோம்.',
+
+      'மாணவர்களின் நவீன கற்றல் வாய்ப்புகளை விரிவுபடுத்துவதற்காக Smart Board, Photocopy Machine போன்ற சாதனங்களையும் வழங்கி வருகின்றோம். அவர்களின் உடல் ஆரோக்கியத்தையும் மனவலிமையையும் மேம்படுத்த யோகாசனப் பயிற்சி முகாம்களையும் நடத்தி வருகின்றோம்.',
+
+      'தலைநகரிலும் தலைநகருக்கு வெளியிலும் உள்ள அங்கத்தவர்களை இணைத்துக்கொண்டு, பல்வேறு சமூகப் பணிகளையும் மன்றம் முன்னெடுத்து வருகின்றது. திடீர் அனர்த்தங்கள் ஏற்படும்போது உடனடி நிவாரண உதவிகளையும் வழங்குகின்றது. அரசாங்கத்தில் பதிவுசெய்யப்பட்டு அங்கீகரிக்கப்பட்ட சமூக சேவை அமைப்பாக இயங்கும் மலையகக் கல்வி அபிவிருத்தி மன்றம், எதிர்காலத்தில் மேலும் பல இளைஞர்கள், வர்த்தகப் பெருமக்கள் மற்றும் நலன்விரும்பிகளை இணைத்துக்கொண்டு, மலையக மாணவர்களின் கல்வி வளர்ச்சிக்காகத் தொடர்ந்து பணியாற்றத் தயாராக உள்ளது என்பதைப் பெருமையுடன் தெரிவித்துக்கொள்கின்றோம்.'
     ],
 
-    sections: [
-      {
-        paragraphs: [
-          'பின்வந்த ஆண்டுகளில், திரு.கே.சிவசுப்பிரமணியம், திரு.ஏ.பாஸ்கரன், திரு.எஸ்.ராஜ்பிரபு, திரு.எம்.சிவகுமார், திரு.எம்.தேவராசன், திரு.சங்கர் சுரேஸ் ஆகியோர் தலைமையேற்று:'
-        ]
-      },
-
-      {
-        isList: true,
-        paragraphs: [
-          'பின்தங்கிய பகுதிப் பாடசாலைகளுக்கு தொண்டர் ஆசிரியர்களை நியமித்தனர்',
-          'இளைஞர் அணியை உருவாக்கி மன்றத்தை விரிவாக்கினர் (2015)',
-          'பட்டதாரிகளுக்கான அரசுத் துறை வழிகாட்டல் கருத்தரங்குகளை நடத்தினர்',
-          'கொரோனா காலத்தில் மலையக வைத்தியசாலைகளுக்கு ஒருகோடி ரூபாய்க்கும் மேற்பட்ட உபகரணங்கள் வழங்கினர் (2019)',
-          'YouTube வழி இணையக் கல்வியை அறிமுகப்படுத்தினர்'
-        ]
-      },
-
-      {
-        paragraphs: [
-          'தற்போது, 19 ஆண்டுகால அனுபவத்துடன் திரு.சிவஞானம் தலைமையில், நிர்வாகக் குழுவின் முழு ஆதரவோடு மன்றம் தொடர்ந்து செயல்படுகின்றது. "வீட்டுக்கொரு பட்டதாரி" என்ற இலக்கோடு, மலையகக் கல்வித்துறை தன்னிறைவு பெற வேண்டும் என்பதே எங்கள் நோக்கம்.'
-        ]
-      }
-    ]
+    sections: []
   },
 
+  // =========================================================
+  // SINHALA
+  // =========================================================
   si: {
-    title: 'කඳුරට අධ්‍යාපන සංවර්ධන සංගමය – කොළඹ හි ඉතිහාසය',
+    title: 'කඳුරට අධ්‍යාපන සංවර්ධන සංගමය',
 
     intro: [
-      'වතු කම්කරුවන්ගේ ජීවිතවලට දරිද්‍රතාවය ගෙන එන දුෂ්කරතා හඳුනාගත් මිතුරන් දෙදෙනෙකු වන තිරු. තනරාජ් සහ තිරු. තවක්කුමාර්, 1990 දශකයේදී චෙට්ටියාර් වීදියේදී සමීප මිතුරන් බවට පත් වූහ. උඩරට ප්‍රජාවේත් ශිෂ්‍යයන්ගේ අනාගතයේත් වෙනසක් ඇති කළ හැකි එකම බලවේගය අධ්‍යාපනය බව විශ්වාස කළ ඔවුන්, අගනුවර ජීවත් වන උඩරට ජනතාව එක්සත් කර සංවිධානයක් පිහිටුවීමට තීරණය කළහ.',
+      'අගනුවර රැකියාවල නිරත තරුණයන් සහ වෘත්තිකයන් විසින් 2006 වසරේදී කොළඹ චෙට්ටියාර් වීදියේ කඳුරට අධ්‍යාපන සංවර්ධන සංගමය ආරම්භ කරන ලදී. ආර්ථික දුෂ්කරතාවලට මුහුණ දෙන කඳුරට සිසුන්ගේ අනාගතය යහපත් කිරීම, ඔවුන්ගේ අධ්‍යාපන හැකියාවන් වර්ධනය කිරීම සහ සම්පත් හිඟ පාසල්වලට අත්‍යවශ්‍ය සහාය ලබා දීම අපගේ අරමුණු වේ. සිසුන් පාසල් අධ්‍යාපනය අතරමඟ නතර කිරීම වැළැක්වීමටත්, අධ්‍යාපනය, ක්‍රීඩා, කලාව සහ සංස්කෘතිය යන ක්ෂේත්‍රවල ඔවුන්ගේ දක්ෂතා වර්ධනය කිරීමටත් අප සංගමය පසුගිය වසර 20 පුරා කටයුතු කරමින් සිටී.',
 
-      'මේ අනුව, 2006 අගෝස්තු 26 වන දින කොළඹ චෙට්ටියාර් වීදියේදී Upcountry Education Development Society බිහි විය. එදින රැස් වූ මිතුරන් 50කට වඩා අද දක්වාම සංගමය සමඟ බැඳී සිටිති.',
+      '“කඳුරට සෑම නිවසකින්ම උපාධිධාරියෙකු බිහි කිරීම” යන අරමුණ ඇතිව විශ්වවිද්‍යාල සිසුන්ට මාසික ශිෂ්‍යත්ව ලබා දෙන්නෙමු. විදේශගතව උසස් අධ්‍යාපනය හදාරන සිසුන්ට ද අවශ්‍ය සහාය ලබා දෙන්නෙමු.',
 
-      'ප්‍රථම සභාපතිවරයා ලෙස වගකීම භාර ගත් තිරු. තවක්කුමාර්, තම මිතුරා වන තිරු. තනරාජ්ගේ සහාය ඇතිව කළමනාකරණ මණ්ඩලය පිහිටුවා සංගමයට අඩිතාලම දැමීය. තිරු. පංගිරාසු ප්‍රථම ලේකම්වරයා ලෙස කටයුතු කළේය. පසුව සභාපති වූ තිරු. තනරාජ්, සංගමයේ ව්‍යවස්ථාව සකස් කර, වෙබ් අඩවියක් ආරම්භ කර, මැයි දින ක්‍රීඩා උළෙල මෙන්ම ශිෂ්‍යත්ව මට්ටමේ සිට උසස් පෙළ දක්වා ශිෂ්‍යයන් සඳහා නොමිලේ අධ්‍යාපනික සම්මන්ත්‍රණ හා පුරෝකථන විභාග හඳුන්වා දුන්නේය. ලේකම් ඒ.එස්.ඤානම්, භාණ්ඩාගාරික තිරු. රාගදාස් සහ අධ්‍යාපනයට සමගාමීව ක්‍රීඩාව දිරිගැන්වූ තිරු. එම්.සිවකුමාර් ද වැදගත් දායකත්වයක් ලබා දුන්හ.'
+      '5 ශ්‍රේණියේ ශිෂ්‍යත්ව විභාගයට සහ අ.පො.ස. සාමාන්‍ය පෙළ හා උසස් පෙළ විභාගවලට පෙනී සිටින සිසුන්ට වඩා හොඳ ප්‍රතිඵල ලබා ගැනීමට උපකාරී වන විශේෂ සම්මන්ත්‍රණ සෑම වසරකම පවත්වන්නෙමු. දෙමළ මාධ්‍ය පාසල්වල සිසුන් සඳහා නොමිලේ පෙරහුරු විභාග ද පවත්වන්නෙමු.',
+
+      'සම්පත් හිඟයෙන් පෙළෙන පාසල් හඳුනාගෙන, එම පාසල්වල සිසුන්ට බාධාවකින් තොරව අධ්‍යාපනය කරගෙන යාම සඳහා ඉගෙනුම් උපකරණ, නිල ඇඳුම්, පාවහන් සහ පාසල් බෑග් ලබා දෙන්නෙමු. පාසල් ගොඩනැගිලි ප්‍රතිසංස්කරණය කිරීමටත්, පානීය ජලය, විදුලිය, වැසිකිළි සහ ආරක්ෂිත තාප්ප වැනි යටිතල පහසුකම් වැඩිදියුණු කිරීමටත් සහාය වෙන්නෙමු.',
+
+      'නවීන ඉගෙනුම් අවස්ථා පුළුල් කිරීම සඳහා ස්මාර්ට් පුවරු සහ ඡායා පිටපත් යන්ත්‍ර වැනි උපකරණ ලබා දෙන්නෙමු. සිසුන්ගේ ශාරීරික සෞඛ්‍යය හා මානසික ශක්තිය වර්ධනය කිරීමට යෝග පුහුණු වැඩසටහන් ද පවත්වන්නෙමු.',
+
+      'කොළඹ සහ ඉන් පිටත සිටින සාමාජිකයන්ගේ සහභාගීත්වයෙන් සංගමය විවිධ ප්‍රජා සේවා කටයුතු සිදු කරයි. හදිසි ආපදා අවස්ථාවලදී කඩිනම් සහන ද ලබා දෙයි. රජයේ ලියාපදිංචි, පිළිගත් සමාජ සේවා සංවිධානයක් වන කඳුරට අධ්‍යාපන සංවර්ධන සංගමය, තවත් තරුණයන්, ව්‍යාපාරිකයන් සහ සුබපතන්නන් එක් කර ගනිමින් කඳුරට සිසුන්ගේ අධ්‍යාපනික දියුණුව සඳහා අඛණ්ඩව කටයුතු කිරීමට අපේක්ෂා කරයි.'
     ],
 
-    sections: [
-      {
-        paragraphs: [
-          'ඉන් අනතුරුව, තිරු. කේ.සිවසුබ්‍රමනියම්, තිරු. ඒ.බාස්කරන්, තිරු. එස්.රාජ්ප්‍රභු, තිරු. එම්.සිවකුමාර්, තිරු. එම්.දේවරාසන් සහ තිරු. සංකර් සුරේෂ් ගේ නායකත්වය යටතේ, සංගමය:'
-        ]
-      },
-
-      {
-        isList: true,
-        paragraphs: [
-          'උඩරට අවතක්සේරු වූ ප්‍රදේශවල පාසල්වලට ස්වේච්ඡා ගුරුවරුන් පත් කළේය',
-          'තරුණ අංශයක් පිහිටුවා සංගමයේ කටයුතු පුළුල් කළේය (2015)',
-          'උපාධිධාරීන්ට ශ්‍රී ලංකා රාජ්‍ය පරිපාලන සේවයට ඇතුළත් වීමට මගපෙන්වීමේ සම්මන්ත්‍රණ සාර්ථකව පවත්වා ගෙන ගියේය',
-          'කොවිඩ්-19 සමයේදී උඩරට රෝහල්වලට රුපියල් කෝටියකට වැඩි වටිනාකමින් යුත් වෛද්‍ය උපකරණ හා ද්‍රව්‍ය පරිත්‍යාග කළේය (2019)',
-          'නිවසේ සිටම ඉගෙනීම පහසු කිරීම සඳහා YouTube හරහා අන්තර්ජාල අධ්‍යාපනය හඳුන්වා දුන්නේය'
-        ]
-      },
-
-      {
-        paragraphs: [
-          'අද වන විට, වසර 19ක ඉතිහාසයක් සහිතව, තිරු. සිවඥානම්ගේ නායකත්වය යටතේ, කළමනාකරණ මණ්ඩලයේ පූර්ණ සහයෝගය ඇතිව සංගමය තම කටයුතු ඉදිරියට ගෙන යයි. "සෑම නිවසකටම උපාධිධාරියෙක්" යන දැක්මට අනුව, උඩරට අධ්‍යාපන අංශයේ ස්වයංපෝෂිත භාවය අපගේ ඉලක්කය වේ.'
-        ]
-      }
-    ]
+    sections: []
   }
 };
+
