@@ -1,20 +1,30 @@
-import { writeFile, mkdir } from 'fs/promises';
-import path from 'path';
-import { v4 as uuidv4 } from 'uuid';
+import { v2 as cloudinary } from "cloudinary";
 
-const UPLOAD_DIR = path.join(process.cwd(), 'public', 'uploads');
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 export async function saveUploadedFile(file: File): Promise<string> {
-  await mkdir(UPLOAD_DIR, { recursive: true });
+  const arrayBuffer = await file.arrayBuffer();
+  const buffer = Buffer.from(arrayBuffer);
 
-  const bytes = await file.arrayBuffer();
-  const buffer = Buffer.from(bytes);
+  return new Promise((resolve, reject) => {
+    const uploadStream = cloudinary.uploader.upload_stream(
+      {
+        folder: "ueds-assets",
+        resource_type: "auto",
+      },
+      (error, result) => {
+        if (error || !result) {
+          reject(error);
+        } else {
+          resolve(result.secure_url);
+        }
+      },
+    );
 
-  const ext = path.extname(file.name) || '.jpg';
-  const filename = `${uuidv4()}${ext}`;
-  const filePath = path.join(UPLOAD_DIR, filename);
-
-  await writeFile(filePath, buffer);
-
-  return `/uploads/${filename}`;
+    uploadStream.end(buffer);
+  });
 }
