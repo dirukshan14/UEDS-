@@ -4,7 +4,7 @@ import { ContentType } from '@prisma/client';
 export function getItemsByType(type: ContentType) {
   return prisma.contentItem.findMany({
     where: { type, published: true },
-    orderBy: [{ order: 'asc' }, { createdAt: 'desc' }]
+    orderBy: { createdAt: 'desc' }
   });
 }
 
